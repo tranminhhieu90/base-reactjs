@@ -1,0 +1,68 @@
+$list-winner-height: 699px;
+$list-winner-title-height: 90px;
+$list-winner-header-height: 80px;
+.list-winner {
+  max-width: 970px;
+  margin: 0 auto;
+  height: $list-winner-height;
+  background: #9ba3ae;
+  border-radius: 15px;
+  margin-top: 80px;
+  color: #ffffff;
+  overflow: hidden;
+  &-title {
+    width: 100%;
+    height: $list-winner-title-height;
+    background: #282d35;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 36px;
+  }
+  &-header {
+    display: flex;
+    height: $list-winner-header-height;
+    background: linear-gradient(90deg, #656d78 0%, #2f3640 100%);
+    &-item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 120%;
+    }
+  }
+  &-body {
+    overflow-y: auto;
+    &::-webkit-scrollbar:vertical {
+      width: 15px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #656d78;
+      border-radius: 10px;
+    }
+    height: calc(
+      #{$list-winner-height} - #{$list-winner-title-height} - #{$list-winner-header-height}
+    );
+    &-row {
+      display: flex;
+      width: 100%;
+      &:not(:last-child) {
+        border-bottom: 1px solid #bbbbbb;
+      }
+      &-item {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+        padding: 30px;
+      }
+    }
+  }
+}

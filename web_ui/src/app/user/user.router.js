@@ -1,12 +1,12 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import HomeMain from "./components/home/main";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import LandingPage from "./components/LandingPage/LandingPage";
 const UserRouter = () => {
-    return (
-        <Switch>
-            <Route exact path="/" component={HomeMain} />
-            <Route path='*' exact component={HomeMain} />
-        </Switch>
-    );
-}
+  return (
+    <Switch>
+      <Route exact path="/" component={LandingPage} />
+      <Route path="*" exact component={LandingPage} />
+    </Switch>
+  );
+};
 export default UserRouter;
