@@ -1,0 +1,118 @@
+.main_user {
+    :root {
+        --bs-font-sans-serif: "Segoe UI", sans-serif;
+        --bs-font-monospace: "Segoe UI", sans-serif;
+    }
+
+    /* Footer */
+
+    .al-footer {
+        padding: 30px 0;
+        background-color: #470967;
+        line-height: 1.5;
+    }
+
+    .al-footer .f-title {
+        margin: 0 0 30px;
+        font-size: 24px;
+        font-weight: 700;
+        font-style: italic;
+        color: #dcdcdc;
+        text-transform: uppercase;
+        border-bottom: 2px solid #666;
+        &::after {
+            width: 45px;
+            height: 3px;
+            content: "";
+            background: #f3a23b;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: -1px;
+        }
+    }
+    .al-logo-footer img {
+        max-width: 80% !important;
+        margin-top: -11px;
+        width: 56% !important;
+    }
+
+    .al-footer ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .al-footer ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .al-footer ul li a:hover {
+        text-decoration: underline;
+    }
+
+    .al-footer-after {
+        padding: 5px 0;
+        font-size: 9px;
+        background-color: #5fbdd8;
+        color: #fff;
+    }
+
+    .al-footer-menu {
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .al-footer-menu li a {
+        text-decoration: none;
+        color: #fff;
+        line-height: 1;
+        border-right: 1px #fff solid;
+        text-transform: uppercase;
+        padding: 0 15px;
+    }
+
+    .al-footer-menu li a:hover {
+        text-decoration: underline;
+    }
+
+    .al-footer-menu li:last-child a {
+        padding-right: 0;
+        border-right: 0;
+    }
+    .al-footer .footer-help {
+        cursor: pointer;
+    }
+    /* Responsive */
+
+    @media (max-width: 576px) {
+        .al-logo-footer {
+            display: block;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px #ddd solid;
+        }
+        .al-logo-footer img {
+            margin: 0 auto;
+            max-height: 60px;
+            width: auto !important;
+        }
+        .al-footer-after .col-sm-6 {
+            text-align: center !important;
+        }
+        .al-footer-menu {
+            justify-content: center;
+            margin-top: 5px;
+        }
+    }
+    // end design
+
+    // start develop
+    .required:after {
+        content: "*";
+        color: Red;
+    }
+}

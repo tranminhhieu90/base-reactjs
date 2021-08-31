@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+  //   "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px !important;
+  color: #333 !important;
+  font-family: Roboto, sans-serif !important;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+// loading
+.spinner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #7c777780;
+  z-index: 1100;
+  .spinner-loader {
+    animation: spinner 1s linear 0s infinite;
+    z-index: 1100;
+    i {
+      color: #74a1e4;
+      font-size: 3rem;
+    }
+  }
+
+  @keyframes spinner {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* scroll custom */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* and scroll custom */
+.class_a {
+  cursor: pointer;
+  color: blue;
+}
+#movetop {
+  display: none;
+  position: fixed;
+  bottom: 3px;
+  right: 0px;
+  z-index: 99;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  -o-border-image: initial;
+  border-image: initial;
+  outline: none;
+  padding: 0px;
+  border-radius: 20px;
+  transition: all 0.5s ease-out 0s;
+}
+.required:after {
+  content: "*";
+  color: Red;
+}
+.span_a {
+  cursor: pointer;
+  color: #2585bd;
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .adOrder_pros .col-md-1 {
+    margin-left: -10px;
+  }
+}
+@media (max-width: 590px) {
+  .adOrder_pros_lb {
+    display: none !important;
+  }
+}
+.alignNum {
+  text-align: end;
+}
+table th,
+td {
+  white-space: nowrap;
+}
+.span_Status {
+  padding: 2px;
+  padding-left: 4px;
+  color: #fff;
+  min-width: 10rem;
+  border-radius: 0.8rem;
+}
+.page-link {
+  cursor: pointer;
+}
+.modal-header {
+  background: #6b98dc;
+}
+.rbt-aux .rbt-close {
+  border: none;
+  background: white;
+}
+.is-invalid .rbt-input {
+  border: 1px #dc3545 solid;
+}
+.swal2-input[type="number"] {
+  max-width: 20rem !important;
+}
+.invalid-feedback {
+  margin-top: 0rem !important;
+}
+.img-blog-wi-full {
+  width: 100%;
+}
+.img-blog-wi-half {
+  width: 50%;
+}
+.img-blog-wi-quarter {
+  width: 25%;
+}
+@media (min-width: 768px) {
+  .swal-wide {
+      width: 25% !important;
+  }
+}

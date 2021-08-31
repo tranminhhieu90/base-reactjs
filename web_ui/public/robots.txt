@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /search/
+Disallow: /category/
+Disallow: /tag/
+Disallow: /?m=0
+Disallow: /?m=1
+Disallow: /*?updated-max=*
+Disallow: *archive.html
+Allow:
+Sitemap:
+https://usmall.vn/sitemap/sitemap.xml

@@ -1,0 +1,6 @@
+{
+    "basedUrl": "http://127.0.0.1:3333/api/v1/",
+    "basedUrlPro": "https://usmall.vn/api/v1/",
+    "port": 0,
+    "isProSite": true
+}
