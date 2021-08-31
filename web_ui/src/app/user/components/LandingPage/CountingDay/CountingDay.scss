@@ -1,0 +1,58 @@
+.counting-day {
+  font-family: inherit;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 209px;
+  background: #ff0049;
+  box-shadow: 0px 100px 80px rgba(255, 0, 73, 0.07),
+    0px 41.7776px 33.4221px rgba(255, 0, 73, 0.0503198),
+    0px 22.3363px 17.869px rgba(255, 0, 73, 0.0417275),
+    0px 12.5216px 10.0172px rgba(255, 0, 73, 0.035),
+    0px 6.6501px 5.32008px rgba(255, 0, 73, 0.0282725),
+    0px 2.76726px 2.21381px rgba(255, 0, 73, 0.0196802);
+  border-radius: 38px;
+  margin-top: 200px;
+  position: relative;
+  &-clock {
+    padding: 36px 0px 0px 106px;
+    color: #ffffff;
+    width: 578px;
+    height: 26px;
+    &-title {
+      font-weight: 500;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    &-time {
+      display: flex;
+      .clock-time-two-dot {
+        font-size: 36px;
+        margin: 0 24px;
+        font-weight: 800;
+      }
+      &-item {
+        text-align: center;
+        .time-item-number {
+          font-weight: 800;
+          font-size: 48px;
+          line-height: 20px;
+        }
+        .time-item-unit {
+          font-weight: 500;
+          font-size: 24px;
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+
+  &-gift {
+    position: absolute;
+    top: -106px;
+    right: 134px;
+    img {
+      width: 258px;
+      height: 281px;
+    }
+  }
+}

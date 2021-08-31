@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
-import { configureStore } from './app/redux/app.store';
-import { Provider } from 'react-redux';
-import 'react-bootstrap-typeahead/css/Typeahead.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { configureStore } from "./app/redux/app.store";
+import { Provider } from "react-redux";
+import "react-bootstrap-typeahead/css/Typeahead.css";
 ReactDOM.render(
   // <React.StrictMode>
   <Provider store={configureStore}>
     <BrowserRouter>
-      < App />
+      <App />
     </BrowserRouter>
-  </Provider>
+  </Provider>,
   // </React.StrictMode>
-  , document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

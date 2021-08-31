@@ -1,0 +1,14 @@
+.questions {
+  &-title {
+    font-weight: 600;
+    font-size: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #656d78, #2f3640);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 120px;
+  }
+ 
+}
