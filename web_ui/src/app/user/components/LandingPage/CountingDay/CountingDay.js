@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CountingDay.scss";
-import Gift from 'app/user/assets/images/PngItem_26427751.png'
+import Gift from "app/user/assets/images/PngItem_26427751.png";
 function CountingDay() {
   return (
     <div className="counting-day">
