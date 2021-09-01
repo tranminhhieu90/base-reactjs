@@ -1,118 +1,113 @@
 .main_user {
-    :root {
-        --bs-font-sans-serif: "Segoe UI", sans-serif;
-        --bs-font-monospace: "Segoe UI", sans-serif;
-    }
+  :root {
+    --bs-font-sans-serif: "Segoe UI", sans-serif;
+    --bs-font-monospace: "Segoe UI", sans-serif;
+  }
 
-    /* Footer */
+  // Header
+  .header {
+    display: flex;
+    max-width: 1260px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    cursor: pointer;
 
-    .al-footer {
-        padding: 30px 0;
-        background-color: #470967;
-        line-height: 1.5;
-    }
-
-    .al-footer .f-title {
-        margin: 0 0 30px;
-        font-size: 24px;
-        font-weight: 700;
-        font-style: italic;
-        color: #dcdcdc;
-        text-transform: uppercase;
-        border-bottom: 2px solid #666;
-        &::after {
-            width: 45px;
-            height: 3px;
-            content: "";
-            background: #f3a23b;
-            display: block;
-            margin-top: 10px;
-            margin-bottom: -1px;
-        }
-    }
-    .al-logo-footer img {
-        max-width: 80% !important;
-        margin-top: -11px;
-        width: 56% !important;
-    }
-
-    .al-footer ul {
+    &-menu {
+      ul {
         list-style: none;
-        padding-left: 0;
-        margin-bottom: 0;
-    }
-
-    .al-footer ul li a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .al-footer ul li a:hover {
-        text-decoration: underline;
-    }
-
-    .al-footer-after {
-        padding: 5px 0;
-        font-size: 9px;
-        background-color: #5fbdd8;
-        color: #fff;
-    }
-
-    .al-footer-menu {
-        margin-bottom: 0;
-        padding-left: 0;
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .al-footer-menu li a {
-        text-decoration: none;
-        color: #fff;
-        line-height: 1;
-        border-right: 1px #fff solid;
-        text-transform: uppercase;
-        padding: 0 15px;
-    }
-
-    .al-footer-menu li a:hover {
-        text-decoration: underline;
-    }
-
-    .al-footer-menu li:last-child a {
-        padding-right: 0;
-        border-right: 0;
-    }
-    .al-footer .footer-help {
+        padding: 0;
+        margin: 0;
         cursor: pointer;
+        display: flex;
+        color: #4f4f4f;
+        font-weight: 500;
+        font-size: 18px;
+        li {
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
+        }
+      }
     }
-    /* Responsive */
+  }
+  /* Footer */
 
-    @media (max-width: 576px) {
-        .al-logo-footer {
-            display: block;
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 1px #ddd solid;
-        }
-        .al-logo-footer img {
-            margin: 0 auto;
-            max-height: 60px;
-            width: auto !important;
-        }
-        .al-footer-after .col-sm-6 {
-            text-align: center !important;
-        }
-        .al-footer-menu {
-            justify-content: center;
-            margin-top: 5px;
-        }
-    }
-    // end design
+  .al-footer {
+    color: #828282;
+    letter-spacing: 0.64px;
+    font-size: 17px;
+    height: 75px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #c5c5c5;
+  }
+}
 
-    // start develop
-    .required:after {
-        content: "*";
-        color: Red;
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .header {
+    max-width: 900px !important;
+    &-menu {
+      ul {
+        font-size: 18px;
+        li {
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
+        }
+      }
     }
+  }
+  .al-footer {
+    max-width: 910px !important;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .header {
+    max-width: 680px !important;
+    &-logo {
+      img {
+        width: 165px;
+      }
+    }
+    &-menu {
+      ul {
+        font-size: 18px;
+        li {
+          &:not(:last-child) {
+            margin-right: 20px !important;
+          }
+        }
+      }
+    }
+  }
+  .al-footer {
+    max-width: 690px !important;
+  }
+}
+
+@media (max-width: 739px) {
+  .header {
+    max-width: 350px !important;
+    &-logo {
+      img {
+        width: 120px;
+      }
+    }
+    &-menu {
+      display: none;
+    }
+  }
+  .header-in-footer {
+    display: none !important;
+  }
+  .al-footer {
+    max-width: 350px !important;
+    font-size: 14px !important;
+  }
 }
