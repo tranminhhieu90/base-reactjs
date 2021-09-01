@@ -7,11 +7,11 @@ function Questions(props) {
         <div>Frequently asked questions </div>
       </div>
       <div className="questions-body">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
+        <div className="accordion" id="accordionExample">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingOne">
               <div
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseOne"
@@ -24,11 +24,11 @@ function Questions(props) {
             </h2>
             <div
               id="collapseOne"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="headingOne"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text. It has roots in a piece of classical Latin literature from
                 45 BC, making it over 2000 years old. Richard McClintock, a
@@ -40,10 +40,10 @@ function Questions(props) {
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingTwo">
               <div
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo"
@@ -56,11 +56,11 @@ function Questions(props) {
             </h2>
             <div
               id="collapseTwo"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="headingTwo"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text. It has roots in a piece of classical Latin literature from
                 45 BC, making it over 2000 years old. Richard McClintock, a
@@ -72,10 +72,10 @@ function Questions(props) {
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
+          <div className="accordion-item">
+            <h2 className="accordion-header" id="headingThree">
               <div
-                class="accordion-button collapsed"
+                className="accordion-button collapsed"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseThree"
@@ -88,11 +88,11 @@ function Questions(props) {
             </h2>
             <div
               id="collapseThree"
-              class="accordion-collapse collapse"
+              className="accordion-collapse collapse"
               aria-labelledby="headingThree"
               data-bs-parent="#accordionExample"
             >
-              <div class="accordion-body">
+              <div className="accordion-body">
                 Contrary to popular belief, Lorem Ipsum is not simply random
                 text. It has roots in a piece of classical Latin literature from
                 45 BC, making it over 2000 years old. Richard McClintock, a
