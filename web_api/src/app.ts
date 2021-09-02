@@ -61,12 +61,29 @@ class App {
   }
 
   private connectToTheDatabase() {
-    const {
-      DATABASE,
-      MONGO_PATH,
-    } = process.env;
-    mongoose.connect(MONGO_PATH + DATABASE, { useNewUrlParser: true, autoIndex: false, useUnifiedTopology: true });
+    try{
+      const { MONGO_USER, MONGO_PWD, MONGO_PATH, DATABASE } = process.env;
+      mongoose.connect(`mongodb://${MONGO_PATH}${DATABASE}?authSource=${DATABASE}`, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        autoIndex: false,
+        user: MONGO_USER,
+        pass: MONGO_PWD,
+      });
+    }
+    catch(e){
+      return e;
+    }
   }
 }
 
 export default App;
+
+// db.createUser(
+//   {
+//     user: 'nerman1',
+//     pwd: 'rPGKur2DGZ34he24',
+//     roles: [ { role: 'readWrite', db: 'ner_man' } ]
+//   }
+// )
+
