@@ -5,7 +5,8 @@
   }
 
   // Header
-  .header {
+  .header,
+  .sub-footer {
     display: flex;
     max-width: 1260px;
     margin: 0 auto;
@@ -49,7 +50,8 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .header {
+  .header,
+  .sub-footer {
     max-width: 900px !important;
     &-menu {
       ul {
@@ -68,7 +70,8 @@
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
-  .header {
+  .header,
+  .sub-footer {
     max-width: 680px !important;
     &-logo {
       img {
@@ -90,10 +93,19 @@
     max-width: 690px !important;
   }
 }
+@media (min-width: 441px) and (max-width: 739px) {
+  .main-footer {
+    display: none !important;
+  }
+  .al-footer {
+    max-width: 550px !important;
+    font-size: 16px !important;
+  }
+}
 
-@media (max-width: 739px) {
+@media (max-width: 440px) {
   .header {
-    max-width: 350px !important;
+    max-width: 330px !important;
     &-logo {
       img {
         width: 120px;
@@ -103,11 +115,11 @@
       display: none;
     }
   }
-  .header-in-footer {
+  .main-footer {
     display: none !important;
   }
   .al-footer {
     max-width: 350px !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 }

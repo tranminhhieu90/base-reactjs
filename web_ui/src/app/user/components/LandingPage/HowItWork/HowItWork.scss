@@ -56,11 +56,29 @@
   }
 }
 
-@media (max-width: 739px) {
+@media (min-width: 441px) and (max-width: 739px) {
+  .how-it-work {
+    height: 400px;
+    border-radius: 36px;
+    margin: 0 auto;
+    margin-top: 50px;
+    &-title {
+      font-size: 36px;
+      padding-top: 30px;
+    }
+    &-video {
+      margin-top: 30px;
+      img {
+        height: 240px;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
   .how-it-work {
     height: 200px;
     border-radius: 36px;
-    max-width: 350px;
     margin: 0 auto;
     margin-top: 50px;
     &-title {
