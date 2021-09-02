@@ -27,5 +27,13 @@ class RewardService {
     	// 	return false;
     	// }
     }
+
+    public async list() {
+    	try{
+    		return await this.winner.find().sort({ created_at: -1 });
+    	} catch (e) {
+    		return false;
+    	}
+    }
 }
 export default RewardService;
