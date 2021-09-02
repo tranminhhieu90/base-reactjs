@@ -86,7 +86,30 @@
   }
 }
 
-@media (max-width: 739px) {
+@media (min-width: 441px) and (max-width: 739px) {
+  .questions {
+    max-width: 600px;
+    margin-top: 55px;
+    &-title {
+      font-size: 23px;
+    }
+    &-body {
+      margin-top: 30px;
+      .accordion-header {
+        height: 55px;
+        .accordion-button {
+          font-size: 15px;
+        }
+      }
+      .accordion-body {
+        font-size: 13px;
+        padding: 10px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
   .questions {
     max-width: 350px;
     margin-top: 55px;
