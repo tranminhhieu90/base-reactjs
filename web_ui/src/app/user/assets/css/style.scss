@@ -14,7 +14,68 @@
     align-items: center;
     height: 100px;
     cursor: pointer;
+    position: relative;
 
+    &-menu-icon {
+      display: none;
+
+      .menu-mobile {
+        background: #ffffffdb;
+        text-align: end;
+        border-radius: 4px;
+        z-index: 3;
+        // height: 50vh;
+        top: 75px;
+        position: absolute;
+        right: 0px;
+        left: 0;
+        -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        // transition: height 0.4s;
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          padding: 10px 15px 10px 0px;
+          color: #4f4f4f;
+          font-weight: 500;
+          font-size: 18px;
+
+          li {
+            &:not(:last-child) {
+              margin-bottom: 20px;
+            }
+            &:hover {
+              color: black;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 30px;
+        height: 3px;
+        background-color: #828282;
+        margin: 8px 0;
+        transition: 0.4s;
+      }
+      .active.bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+
+      .active.bar2 {
+        opacity: 0;
+      }
+
+      .active.bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+    }
     &-menu {
       ul {
         list-style: none;
@@ -28,6 +89,9 @@
         li {
           &:not(:last-child) {
             margin-right: 40px;
+          }
+          &:hover {
+            color: black;
           }
         }
       }
@@ -53,6 +117,7 @@
   .header,
   .sub-footer {
     max-width: 900px !important;
+
     &-menu {
       ul {
         font-size: 18px;
@@ -94,6 +159,22 @@
   }
 }
 @media (min-width: 441px) and (max-width: 739px) {
+  .header {
+    &-menu-icon {
+      display: block !important;
+      margin-right: 20px;
+    }
+    &-logo {
+      img {
+        width: 120px;
+        margin-left: 20px;
+      }
+    }
+    &-menu {
+      display: none;
+    }
+  }
+
   .main-footer {
     display: none !important;
   }
@@ -105,10 +186,15 @@
 
 @media (max-width: 440px) {
   .header {
-    max-width: 330px !important;
+    &-menu-icon {
+      display: block !important;
+      margin-right: 20px;
+    }
+    // max-width: 330px !important;
     &-logo {
       img {
         width: 120px;
+        margin-left: 20px;
       }
     }
     &-menu {
