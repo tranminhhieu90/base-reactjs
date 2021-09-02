@@ -77,3 +77,103 @@
     }
   }
 }
+@media only screen and (min-width: 770px) and (max-width: 1024px) {
+  img {
+    height: 38rem !important;
+  }
+  .slide-left {
+    .slide-left-wrap {
+      left: 10% !important;
+    }
+    img {
+      height: 11rem !important;
+    }
+    .play_3 {
+      img {
+        width: 1rem !important;
+        height: 1rem !important;
+      }
+    }
+  }
+  .slide-right {
+    background-position: center !important;
+    background-size: 70% 70% !important;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  img {
+    height: 38rem !important;
+  }
+  .slide-left {
+    .slide-left-wrap {
+      left: 10% !important;
+    }
+
+    img {
+      width: 14rem !important;
+      height: 8rem !important;
+    }
+    .play_1 {
+      width: 5rem !important;
+      height: 5rem !important;
+      .play_2 {
+        width: 4rem !important;
+        height: 4rem !important;
+        .play_3 {
+          width: 3rem !important;
+          height: 3rem !important;
+          img {
+            width: 1rem !important;
+            height: 1rem !important;
+          }
+        }
+      }
+    }
+    .text-body {
+      font-size: 15px;
+    }
+  }
+  .slide-right {
+    background-position: center !important;
+    background-size: 70% 70% !important;
+  }
+}
+@media (max-width: 576px) {
+  img {
+    height: 22rem !important;
+  }
+  .slide-left {
+    .slide-left-wrap {
+      left: 10% !important;
+    }
+
+    img {
+      width: 6rem !important;
+      height: 6rem !important;
+    }
+    .play_1 {
+      width: 3rem !important;
+      height: 3rem !important;
+      .play_2 {
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        .play_3 {
+          width: 2rem !important;
+          height: 2rem !important;
+          img {
+            width: 0.5rem !important;
+            height: 0.5rem !important;
+          }
+        }
+      }
+    }
+    .text-body {
+      font-size: 12px;
+    }
+  }
+  .slide-right {
+    background-position: center !important;
+    background-size: 70% 70% !important;
+  }
+}

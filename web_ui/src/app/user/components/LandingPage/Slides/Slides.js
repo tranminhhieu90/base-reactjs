@@ -10,7 +10,7 @@ function Slides(props) {
       <div className="slides-header">
         <Header />
       </div>
-      <div id="carouselExampleControls" className="carousel slide carousel-dk" data-ride="carousel">
+      <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
           <li data-target="#carouselExampleControls" data-slide-to="0" className="active"></li>
           <li data-target="#carouselExampleControls" data-slide-to="1" ></li>
@@ -19,7 +19,7 @@ function Slides(props) {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="row item-wrap">
-              <div className="col-md-5 slide-left" >
+              <div className="col-md-5 col-5 slide-left" >
                 <div className="slide-left-wrap">
                   <div>
                     {/* <h1>Win!</h1>
@@ -41,7 +41,7 @@ function Slides(props) {
                   </div>
                 </div>
               </div>
-              <div className="col-md-7 slide-right" >
+              <div className="col-md-7 col-7 slide-right" >
                 <img className="d-block"
                   src={img1} alt={img1} />
               </div>
@@ -49,7 +49,7 @@ function Slides(props) {
           </div>
           <div className="carousel-item ">
             <div className="row item-wrap">
-              <div className="col-md-5 slide-left" >
+              <div className="col-md-5 col-5 slide-left" >
                 <div className="slide-left-wrap">
                   <div>
                     {/* <h1>Win!</h1>
@@ -71,7 +71,7 @@ function Slides(props) {
                   </div>
                 </div>
               </div>
-              <div className="col-md-7 slide-right" >
+              <div className="col-md-7 col-7 slide-right" >
                 <img className="d-block"
                   src={img1} alt={img1} />
               </div>
@@ -79,7 +79,7 @@ function Slides(props) {
           </div>
           <div className="carousel-item ">
             <div className="row item-wrap">
-              <div className="col-md-5 slide-left" >
+              <div className="col-md-5 col-5 slide-left" >
                 <div className="slide-left-wrap">
                   <div>
                     {/* <h1>Win!</h1>
@@ -101,7 +101,7 @@ function Slides(props) {
                   </div>
                 </div>
               </div>
-              <div className="col-md-7 slide-right" >
+              <div className="col-md-7 col-7 slide-right" >
                 <img className="d-block"
                   src={img1} alt={img1} />
               </div>
