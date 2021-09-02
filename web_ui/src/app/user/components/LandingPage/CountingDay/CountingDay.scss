@@ -16,7 +16,6 @@
   &-clock {
     padding: 36px 0px 0px 106px;
     color: #ffffff;
-    width: 578px;
     height: 26px;
     &-title {
       font-weight: 500;
@@ -25,6 +24,7 @@
     }
     &-time {
       display: flex;
+
       .clock-time-two-dot {
         font-size: 36px;
         margin: 0 24px;
@@ -53,6 +53,157 @@
     img {
       width: 258px;
       height: 281px;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .counting-day {
+    max-width: 900px;
+    &-clock {
+      &-title {
+        font-size: 28px;
+      }
+      &-time {
+        display: flex;
+        .clock-time-two-dot {
+          font-size: 28px;
+        }
+        &-item {
+          text-align: center;
+          .time-item-number {
+            font-size: 36px;
+          }
+          .time-item-unit {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    &-gift {
+      top: -90px;
+      right: 60px;
+      img {
+        width: 240px;
+        height: 240px;
+      }
+    }
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .counting-day {
+    max-width: 690px;
+    &-clock {
+      padding: 36px 0px 0px 40px;
+      &-title {
+        font-size: 26px;
+      }
+      &-time {
+        display: flex;
+        .clock-time-two-dot {
+          font-size: 25px;
+        }
+        &-item {
+          text-align: center;
+          .time-item-number {
+            font-size: 30px;
+          }
+          .time-item-unit {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    &-gift {
+      top: -80px;
+      right: 25px;
+      img {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  }
+}
+
+@media (min-width: 441px) and (max-width: 739px) {
+  .counting-day {
+    max-width: 600px;
+    margin-top: 160px;
+    &-clock {
+      padding: 36px 0px 0px 35px;
+      &-title {
+        font-size: 24px;
+      }
+      &-time {
+        display: flex;
+        .clock-time-two-dot {
+          font-size: 25px;
+          margin: 0 17px;
+        }
+        &-item {
+          text-align: center;
+          .time-item-number {
+            font-size: 28px;
+          }
+          .time-item-unit {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    &-gift {
+      top: -80px;
+      right: 25px;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .counting-day {
+    max-width: 360px;
+    margin-top: 60px;
+    height: 100px;
+    &-clock {
+      padding: 18px 0px 0px 25px;
+      &-title {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      &-time {
+        display: flex;
+        align-items: center;
+        .clock-time-two-dot {
+          font-size: 16px;
+          margin: 0 7px;
+        }
+        &-item {
+          text-align: center;
+          .time-item-number {
+            font-size: 16px;
+          }
+          .time-item-unit {
+            font-size: 12px;
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+
+    &-gift {
+      top: -40px;
+      right: 13px;
+      img {
+        width: 100px;
+        height: 100px;
+      }
     }
   }
 }

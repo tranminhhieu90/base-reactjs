@@ -66,3 +66,81 @@ $list-winner-header-height: 80px;
     }
   }
 }
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .list-winner {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .list-winner {
+    max-width: 550px;
+    &-header {
+      &-item {
+        font-size: 22px;
+        padding-right: 30px;
+      }
+    }
+    &-body {
+      &-row {
+        &-item {
+          font-size: 20px;
+          padding: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 441px) and (max-width: 739px) {
+  .list-winner {
+    max-width: 550px;
+    margin-top: 60px;
+    &-title {
+      font-size: 28px;
+      // height: 60px;
+    }
+    &-header {
+      // height: 60px;
+      &-item {
+        font-size: 18px;
+        padding-right: 28px;
+      }
+    }
+    &-body {
+      &-row {
+        &-item {
+          font-size: 14px;
+          padding: 30px 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .list-winner {
+    max-width: 350px;
+    margin-top: 60px;
+    &-title {
+      font-size: 28px;
+      // height: 60px;
+    }
+    &-header {
+      // height: 60px;
+      &-item {
+        font-size: 18px;
+        padding-right: 28px;
+      }
+    }
+    &-body {
+      &-row {
+        &-item {
+          font-size: 14px;
+          padding: 30px 5px;
+        }
+      }
+    }
+  }
+}
