@@ -3,7 +3,7 @@
   max-width: 1170px;
   margin: 0 auto;
   height: 209px;
-  background: #ff0049;
+  background: linear-gradient(#89d9fd, #4269fa);
   box-shadow: 0px 100px 80px rgba(255, 0, 73, 0.07),
     0px 41.7776px 33.4221px rgba(255, 0, 73, 0.0503198),
     0px 22.3363px 17.869px rgba(255, 0, 73, 0.0417275),
@@ -14,9 +14,11 @@
   margin-top: 100px;
   position: relative;
   &-clock {
-    padding: 36px 0px 0px 106px;
+    padding: 36px 0px 0px 0px;
     color: #ffffff;
-    height: 26px;
+    display: flex;
+    justify-content: space-around;
+
     &-title {
       font-weight: 500;
       font-size: 36px;
@@ -44,15 +46,9 @@
         }
       }
     }
-  }
-
-  &-gift {
-    position: absolute;
-    top: -106px;
-    right: 134px;
-    img {
-      width: 258px;
-      height: 281px;
+    .counting-day-gift {
+      position: relative;
+      top: -120px;
     }
   }
 }
@@ -79,14 +75,8 @@
           }
         }
       }
-    }
-
-    &-gift {
-      top: -90px;
-      right: 60px;
-      img {
-        width: 240px;
-        height: 240px;
+      .counting-day-gift {
+        top: -120px;
       }
     }
   }
@@ -95,8 +85,10 @@
 @media (min-width: 740px) and (max-width: 1023px) {
   .counting-day {
     max-width: 690px;
+    margin-top: 120px;
+    height: 170px;
     &-clock {
-      padding: 36px 0px 0px 40px;
+      padding: 20px 0px 0px 40px;
       &-title {
         font-size: 26px;
       }
@@ -115,14 +107,12 @@
           }
         }
       }
-    }
-
-    &-gift {
-      top: -80px;
-      right: 25px;
-      img {
-        width: 220px;
-        height: 220px;
+      .counting-day-gift {
+        top: -65px;
+        img {
+          width: 200px;
+          height: 200px;
+        }
       }
     }
   }
@@ -131,9 +121,10 @@
 @media (min-width: 441px) and (max-width: 739px) {
   .counting-day {
     max-width: 600px;
-    margin-top: 160px;
+    margin-top: 120px;
+    height: 170px;
     &-clock {
-      padding: 36px 0px 0px 35px;
+      padding: 20px 0px 0px 35px;
       &-title {
         font-size: 24px;
       }
@@ -153,14 +144,12 @@
           }
         }
       }
-    }
-
-    &-gift {
-      top: -80px;
-      right: 25px;
-      img {
-        width: 200px;
-        height: 200px;
+      .counting-day-gift {
+        top: -65px;
+        img {
+          width: 180px;
+          height: 180px;
+        }
       }
     }
   }
@@ -170,9 +159,9 @@
   .counting-day {
     max-width: 360px;
     margin-top: 60px;
-    height: 100px;
+    height: 90px;
     &-clock {
-      padding: 18px 0px 0px 25px;
+      padding: 10px 0px 0px 14px;
       &-title {
         font-size: 16px;
         margin-bottom: 5px;
@@ -195,14 +184,12 @@
           }
         }
       }
-    }
-
-    &-gift {
-      top: -40px;
-      right: 13px;
-      img {
-        width: 100px;
-        height: 100px;
+      .counting-day-gift {
+        top: -44px;
+        img {
+          width: 110px;
+          height: 110px;
+        }
       }
     }
   }

@@ -2,6 +2,7 @@
   max-width: 1170px;
   margin: 0 auto;
   margin-top: 120px;
+  margin-bottom: 70px;
   &-title {
     font-weight: 600;
     font-size: 64px;
@@ -13,7 +14,7 @@
     -webkit-text-fill-color: transparent;
   }
   &-body {
-    margin-top: 70px;
+    margin-top: 50px;
     .accordion-item {
       margin-bottom: 20px;
       border: 1px solid #4f4f4f;
