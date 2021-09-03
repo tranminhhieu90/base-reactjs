@@ -221,6 +221,7 @@ class WheelLucky extends React.Component {
         };
         apiCode.spin(obj).then(res => {
             if (res.data.status === 200) {
+                this.getReward();
                 swal2.fire({
                     icon: 'success',
                     title: 'Quay thưởng thành công',
