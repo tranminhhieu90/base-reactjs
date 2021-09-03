@@ -11,9 +11,9 @@ function CountingDay() {
   });
   const [showCountDays, setShowCountDays] = useState(true);
   const updateTimeLeft = () => {
-    const endDay = new Date("10/15/2021 24:00:00");
-    const currentTime = new Date();
-    let secondsLeft = (endDay.getTime() - currentTime.getTime()) / 1000;
+    const endDay = Date.parse("2021-10-15T24:00:00");
+    const currentTime = Date.now();
+    let secondsLeft = (endDay - currentTime) / 1000;
     let remainingDays = Math.floor(secondsLeft / 3600 / 24);
     let remainingHour = Math.floor(secondsLeft / 3600);
     let remainingMinutes = Math.floor(secondsLeft / 60);
