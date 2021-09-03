@@ -11,7 +11,7 @@
     justify-content: center;
     background: linear-gradient(to right, #656d78, #2f3640);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // -webkit-text-fill-color: transparent;
   }
   &-body {
     margin-top: 50px;
@@ -34,7 +34,7 @@
         border: 0;
         background: linear-gradient(to right, #09090a, #010710);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        // -webkit-text-fill-color: transparent;
       }
     }
     .accordion-body {
