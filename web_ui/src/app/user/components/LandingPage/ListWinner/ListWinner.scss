@@ -4,16 +4,18 @@ $list-winner-header-height: 80px;
 .list-winner {
   max-width: 970px;
   margin: 0 auto;
-  height: $list-winner-height;
+  // height: $list-winner-height;
   background: #9ba3ae;
   border-radius: 15px;
   margin-top: 80px;
   color: #ffffff;
   overflow: hidden;
+  background: linear-gradient(#89d9fd, #4269fa);
   &-title {
     width: 100%;
     height: $list-winner-title-height;
-    background: #282d35;
+    // background: #282d35;
+    background: linear-gradient(#89d9fd, #4269fa);
     border-radius: 15px 15px 0px 0px;
     display: flex;
     align-items: center;
@@ -24,7 +26,8 @@ $list-winner-header-height: 80px;
   &-header {
     display: flex;
     height: $list-winner-header-height;
-    background: linear-gradient(90deg, #656d78 0%, #2f3640 100%);
+    // background: linear-gradient(90deg, #656d78 0%, #2f3640 100%);
+    background: linear-gradient(#89d9fd, #4269fa);
     &-item {
       flex: 1;
       display: flex;
@@ -34,11 +37,15 @@ $list-winner-header-height: 80px;
       font-size: 24px;
       line-height: 120%;
     }
+    &-item.reward {
+      width: 350px;
+      flex: unset;
+    }
   }
   &-body {
     overflow-y: auto;
     &::-webkit-scrollbar:vertical {
-      width: 15px;
+      width: 10px;
     }
     &::-webkit-scrollbar-thumb {
       background-color: #656d78;
@@ -59,34 +66,81 @@ $list-winner-header-height: 80px;
         align-items: center;
         justify-content: center;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 21px;
         line-height: 120%;
-        padding: 30px;
+        padding: 20px 5px;
+        border-bottom: 1px solid;
+      }
+      &-item.reward {
+        width: 350px;
+        flex: unset;
       }
     }
+    // .no-data {
+    //   height: 100%;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   font-size: 36px;
+    //   font-weight: 600;
+    // }
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
   .list-winner {
     max-width: 700px;
-  }
-}
-
-@media (min-width: 740px) and (max-width: 1023px) {
-  .list-winner {
-    max-width: 550px;
+    &-title {
+      font-size: 34px;
+    }
     &-header {
       &-item {
         font-size: 22px;
-        padding-right: 30px;
+      }
+      &-item.reward {
+        width: 350px;
+        flex: unset;
       }
     }
     &-body {
       &-row {
         &-item {
           font-size: 20px;
-          padding: 30px;
+          padding: 20px 5px;
+        }
+        &-item.reward {
+          width: 350px;
+          flex: unset;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .list-winner {
+    max-width: 550px;
+    &-title {
+      font-size: 30px;
+    }
+    &-header {
+      &-item {
+        font-size: 18px;
+      }
+      &-item.reward {
+        width: 260px;
+        flex: unset;
+      }
+    }
+    &-body {
+      &-row {
+        &-item {
+          font-size: 16px;
+          padding: 20px 5px;
+        }
+        &-item.reward {
+          width: 260px;
+          flex: unset;
         }
       }
     }
@@ -99,20 +153,25 @@ $list-winner-header-height: 80px;
     margin-top: 60px;
     &-title {
       font-size: 28px;
-      // height: 60px;
     }
     &-header {
-      // height: 60px;
       &-item {
         font-size: 18px;
-        padding-right: 28px;
+      }
+      &-item.reward {
+        width: 260px;
+        flex: unset;
       }
     }
     &-body {
       &-row {
         &-item {
-          font-size: 14px;
-          padding: 30px 5px;
+          font-size: 16px;
+          padding: 20px 5px;
+        }
+        &-item.reward {
+          width: 260px;
+          flex: unset;
         }
       }
     }
@@ -121,24 +180,34 @@ $list-winner-header-height: 80px;
 
 @media (max-width: 440px) {
   .list-winner {
-    max-width: 350px;
+    max-width: 360px;
     margin-top: 60px;
     &-title {
-      font-size: 28px;
-      // height: 60px;
+      font-size: 20px;
+      height: 70px;
     }
     &-header {
-      // height: 60px;
+      height: 60px;
       &-item {
-        font-size: 18px;
-        padding-right: 28px;
+        font-size: 13px;
+        text-align: center;
+      }
+      &-item.reward {
+        width: 180px;
+        flex: unset;
       }
     }
     &-body {
+      height: calc(#{$list-winner-height} - 70px - 60px);
+      height: 400px;
       &-row {
         &-item {
-          font-size: 14px;
-          padding: 30px 5px;
+          font-size: 11px;
+          padding: 20px 5px;
+        }
+        &-item.reward {
+          width: 180px;
+          flex: unset;
         }
       }
     }
