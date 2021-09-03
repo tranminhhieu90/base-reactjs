@@ -40,30 +40,27 @@ export default function ModalWheel(props) {
         if (e.charCode < 48 || e.charCode > 57)
             e.preventDefault();
     }
-    const save = async () => {
-        props.save();
+    const confirm = async () => {
         if (handleValidation('', fields)) {
-            // await api.updateCategory(fields).then(res => {
-            //     if (res.data.status === 200) {
-            //         toast.success("Cập nhật thành công.");
-            //         props.close();
-            //     } else
-            //         toast.warning(res.data.message);
-            // }).catch((error) => {
-            //     toast.warning("Cập nhật thất bại.");
-            // });
+            await apiCode.checkOnGoingCode(fields.code).then(res => {
+                if (res.data.status === 200) {
+                    props.spin(fields);
+                } else
+                    toast.warning(res.data.message);
+            }).catch((error) => {
+                toast.warning("Quay thưởng thất bại.");
+            });
         }
     };
-    // end add, edit
     return (
         <>
-            <Modal show={true} size="lg" onHide={() => props.close()}>
+            <Modal show={true} size="lg" onHide={() => props.spin(null)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Nhập thông tin quay thưởng</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row justify-content-center">
-                        <div class="col-md-9">
+                        <div className="col-md-9">
                             <div className="form-group mb-4">
                                 <label >Họ và tên</label>
                                 <input type="text" className={`form-control form-control-lg ${!!errors.name && 'is-invalid'}`} name="name" id="name"
@@ -83,13 +80,11 @@ export default function ModalWheel(props) {
                                 <div className="invalid-feedback">{errors.code}</div>
                             </div>
                         </div>
-
                     </div>
-
 
                 </Modal.Body>
                 <Modal.Footer>
-                    <button type="button" className="btn btn-primary btn-warning btn-lg" onClick={save}>Xác nhận</button>
+                    <button type="button" className="btn btn-primary btn-warning btn-lg" onClick={confirm}>Xác nhận</button>
                 </Modal.Footer>
             </Modal>
         </>
