@@ -1,32 +1,11 @@
 import React from "react";
 import "./wheel.scss";
-
+import * as apiReward from "../../../services/reward";
+import * as apiCode from "../../../services/code";
+import { toast } from 'react-toastify';
 export default class Wheel extends React.Component {
     state = {
-        // list: [
-        //     'Thẻ điẻn thoại 50k',
-        //     'Thẻ điẻn thoại 100k',
-        //     'Gói tinder gold 1 tháng',
-        //     'Bình nước',
-        //     'Iphone',
-        //     'Airpod',
-        //     'Gói tinder plus 1 tuần',
-        //     'Combo 39k',
-        //     'Sữa rửa mặt',
-        //     'BBcream cho nam',
-        // ],
-        list: [
-            'Thẻ điẻn thoại 50k',
-            'Thẻ điẻn thoại 100k',
-            'Gói tinder gold 1 tháng',
-            'Bình nước',
-            'Iphone',
-            'Airpod',
-            'Gói tinder plus 1 tuần',
-            'Combo 39k',
-            'Sữa rửa mặt',
-            'BBcream cho nam',
-        ],
+        rewards: [],
         radius: 90, // PIXELS
         rotate: 0, // DEGREES
         easeOut: 0, // SECONDS
@@ -35,20 +14,25 @@ export default class Wheel extends React.Component {
         offset: null, // RADIANS
         net: null, // RADIANS
         result: null, // INDEX
-        spinning: false
     };
-
-    componentDidMount() {
-        // generate canvas wheel on load
-        this.renderWheel();
+    componentWillMount() {
+        this.getReward();
+    }
+    getReward() {
+        apiReward.list().then(res => {
+            if (res.data.status === 200) {
+                this.setState({ rewards: res.data.result });
+                this.renderWheel();
+            }
+        }).catch((error) => { });
     }
     componentWillReceiveProps(nextProps) {
-        if (nextProps.isSpinning)
+        if (nextProps.paramSpin && this.props.paramSpin !== nextProps.paramSpin)
             this.spin();
     }
     renderWheel() {
         // determine number/angle of sectors that need to created
-        let numOptions = this.state.list.length;
+        let numOptions = this.state.rewards.length;
         let angle = (2 * Math.PI) / numOptions;
         this.setState({ angle });
         // get index of starting position of selector
@@ -57,7 +41,7 @@ export default class Wheel extends React.Component {
         // dynamically generate sectors from state list
         let angleStart = 0;
         for (let i = 0; i < numOptions; i++) {
-            let text = this.state.list[i];
+            let text = this.state.rewards[i].name;
             this.renderSector(i + 1, text, angleStart, angle, this.getColor());
             angleStart += angle;
         }
@@ -91,6 +75,7 @@ export default class Wheel extends React.Component {
         ctx.arc(x, y, radius, startAngle, endAngle, false);
         ctx.lineWidth = radius * 2;
         ctx.strokeStyle = color;
+        ctx.save();
 
         // set text
         ctx.font = "13px Arial";
@@ -118,15 +103,14 @@ export default class Wheel extends React.Component {
     }
 
     spin = () => {
+        this.reset();
         // set random spin degree and ease out time
         // set state variables to initiate animation
         let randomSpin = Math.floor(Math.random() * 900) + 500 //example 360 is a round, 180 is half round;
         this.setState({
             rotate: randomSpin,
             easeOut: 2,
-            spinning: true
         });
-
         // calcalute result after wheel stops spinning
         setTimeout(() => {
             this.getResult(randomSpin);
@@ -137,7 +121,7 @@ export default class Wheel extends React.Component {
         // find net rotation and add to offset angle
         // repeat substraction of inner angle amount from total distance traversed
         // use count as an index to find value of result from state list
-        const { angle, top, offset, list } = this.state;
+        const { angle, top, offset, rewards } = this.state;
         let netRotation = ((spin % 360) * Math.PI) / 180; // RADIANS
         let travel = netRotation + offset;
         let count = top + 1;
@@ -145,21 +129,37 @@ export default class Wheel extends React.Component {
             travel = travel - angle;
             count--;
         }
-        let result = count >= 0 ? count : list.length + count;
+        let result = count >= 0 ? count : rewards.length + count;
         // set state variable to display result
+        this.saveReward(result);
         this.setState({
             net: netRotation,
             result: result
         });
     };
 
+    saveReward = (rewardIndex) => {
+        const reward_id = this.state.rewards[rewardIndex].id;
+        alert(this.state.rewards[rewardIndex].name)
+        const obj = {
+            reward_id,
+            ...this.props.paramSpin
+        };
+        apiCode.spin(obj).then(res => {
+            if (res.data.status === 200) {
+                toast.success('Quay thưởng thành công');
+            } else
+                toast.warning(res.data.message);
+        }).catch((error) => {
+            toast.warning("Quay thưởng thất bại.");
+        });
+    }
     reset = () => {
         // reset wheel and result
         this.setState({
             rotate: 0,
             easeOut: 0,
             result: null,
-            spinning: false
         });
     };
 
@@ -177,21 +177,6 @@ export default class Wheel extends React.Component {
                             }s ease-out`// time quay , ease-out chậm ở cuối lúc quay
                     }}
                 />
-                {this.state.spinning ? (
-                    <button type="button" id="reset" onClick={this.reset}>
-                        reset
-                    </button>
-                ) : (
-                    <button type="button" id="spin" onClick={this.spin}>
-                        spin
-                    </button>
-                )}
-                <div class="display">
-                    <span id="readout">
-                        YOU WON:{"  "}
-                        <span id="result">{this.state.list[this.state.result]}</span>
-                    </span>
-                </div>
             </div>
         );
     }

@@ -1,50 +1,10 @@
 .wheel-wrap {
     position: relative;
 }
-button {
-    background: none;
-    border: 1px solid black;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-#spin,
-#reset {
-    position: absolute;
-    bottom: 20vh;
-    right: 45vw;
-}
-
-#spin:hover {
-    color: rgb(0, 180, 120);
-    border-color: rgb(0, 180, 120);
-}
-
-#spin:focus,
-#reset:focus {
-    outline: none;
-}
-
-#readout {
-    position: absolute;
-    bottom: 7vh;
-    left: 35vw;
-}
 
 #selector {
     position: absolute;
     font-size: 40px;
     color: #656d78;
     left: 47%;
-}
-
-#result {
-    font-size: 50px;
-    color: rgb(0, 180, 120);
-}
-
-input {
-    font-size: 16px;
-    border: none;
-    border-bottom: 1px solid black;
 }

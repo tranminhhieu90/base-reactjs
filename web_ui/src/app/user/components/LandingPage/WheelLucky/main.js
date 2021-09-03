@@ -5,24 +5,27 @@ import ModalWheel from './modal';
 export default function WheelLucky() {
 
     const [isOpenModal, setIsOpenModal] = useState(false);
-    const [isSpinning, setIsSpinning] = useState(false);
+    const [paramSpin, setParamSpin] = useState(null);
+    const onSpin = (param) => {
+        setIsOpenModal(false);
+        setParamSpin(param)
+    }
     return (
-        <div className="container mt-5">
+        <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                    <Wheel isSpinning={isSpinning} />
+                    <Wheel paramSpin={paramSpin} />
                 </div>
                 <div className="col-md-6 content-right">
                     <div className="mb-4">
-                        <h1>Spin Here Now.</h1>
+                        <h1>1 tỷ VND quà tặng</h1>
                     </div>
-                    <p className="col-md-9 mb-4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-                        a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure.</p>
-                    <button type="button" className="btn btn-danger btn-lg" onClick={() => setIsOpenModal(true)}>Spin Now</button>
+                    <p className="col-md-9 mb-4">Với mỗi sản phẩm mua từ ngày 5/9 đến ngày 5/10 khách hàng sẽ nhận 1 mã quay thưởng.
+                        100% trúng thưởng với hàng ngàn phần quà trị giá hơn 1 tỷ đồng từ Nerman.</p>
+                    <button type="button" className="btn btn-danger btn-lg" onClick={() => setIsOpenModal(true)}>Quay Ngay</button>
                 </div>
             </div>
-            {isOpenModal && <ModalWheel close={() => { setIsOpenModal(false) }} save={() => setIsSpinning(true)} />}
+            {isOpenModal && <ModalWheel spin={(param) => onSpin(param)} />}
         </div>
     );
 

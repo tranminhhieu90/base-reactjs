@@ -1,5 +1,6 @@
 .container {
     position: relative;
+    margin-top: 5rem;
 }
 
 .content-right {
@@ -12,9 +13,10 @@
     p {
         font-weight: 500;
         color: #656d78;
+        font-size: 1.2rem;
     }
     .btn {
-        border-radius: 30%;
+        border-radius: 2rem;
         padding: 1rem;
     }
 }
@@ -30,6 +32,7 @@
         border: none;
         font-size: 2rem;
         color: #ffcd39;
+        background: white;
     }
     .modal-footer {
         justify-content: center;
