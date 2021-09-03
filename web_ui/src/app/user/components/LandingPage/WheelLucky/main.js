@@ -11,7 +11,7 @@ export default function WheelLucky() {
         setParamSpin(param)
     }
     return (
-        <div className="container">
+        <div className="container pb-5">
             <div className="row">
                 <div className="col-md-6">
                     <Wheel paramSpin={paramSpin} />
