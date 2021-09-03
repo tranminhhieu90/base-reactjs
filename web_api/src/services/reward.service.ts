@@ -130,7 +130,7 @@ class RewardService {
 
     public async list() {
     	try{
-    		return await this.reward.find().sort({ created_at: -1 });
+    		return await this.reward.find().skip(0).limit(10).sort({ created_at: 1 });
     	} catch (e) {
     		return false;
     	}
