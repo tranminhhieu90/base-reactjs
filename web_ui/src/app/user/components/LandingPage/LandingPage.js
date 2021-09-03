@@ -11,7 +11,7 @@ function LandingPage(props) {
   return (
     <div className="landing-page">
       <Slides />
-      {/* <WheelLucky /> */}
+      <WheelLucky />
       <CountingDay />
       <ListWinner />
       <HowItWork />

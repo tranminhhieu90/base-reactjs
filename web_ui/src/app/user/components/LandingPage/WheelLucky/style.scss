@@ -1,44 +1,55 @@
-// Setup wheel colors
-
-$frameColor: #2f3640cc;
-$winIndicatorColor: #fff;
-$middleColor: #fff;
-$colors: #ba4d4e //sector 1 color
-    #1592e8 //sector 2 color
-    #14c187 //sector 3 color
-    #fc7800 //sector 4 color
-    #14c187 //sector 5 color
-    #1592e8 //sector 6 color
-    #ba4d4e //sector 7 color
-    #1592e8 //sector 8 color
-    #14c187 //sector 9 color
-    #fc7800 //sector 10 color
-    #14c187 //sector 11 color
-    #fff; //sector 12 color
-
-@mixin setColor($n) {
-    fill: nth($colors, $n);
+.container {
+    position: relative;
 }
 
-@for $i from 1 through 12 {
-    #_#{$i} {
-        @include setColor($i);
+.content-right {
+    padding-top: 4rem;
+    h1 {
+        font-size: 46px;
+        font-weight: 800;
+        color: #656d78;
+    }
+    p {
+        font-weight: 500;
+        color: #656d78;
+    }
+    .btn {
+        border-radius: 30%;
+        padding: 1rem;
     }
 }
-
-.frame,
-.sticks {
-    fill: $frameColor;
+.modal-dialog {
+    max-width: 765px !important;
 }
-
-.winIndicator {
-    fill: $winIndicatorColor;
+.modal-content {
+    .modal-title {
+        font-weight: 600;
+        color: #656d78;
+    }
+    .close {
+        border: none;
+        font-size: 2rem;
+        color: #ffcd39;
+    }
+    .modal-footer {
+        justify-content: center;
+        .btn {
+            font-weight: 600;
+            color: #656d78;
+            border-radius: 1rem;
+        }
+    }
+    .modal-body {
+        label {
+            font-weight: 600;
+            color: #656d78;
+            margin-left: 1rem;
+        }
+        .form-control {
+            border-radius: 2rem;
+        }
+        .invalid-feedback {
+            margin-left: 1rem;
+        }
+    }
 }
-
-
-.luckywheel {
-    margin: 40px auto;
-    width: 50% !important;
-    height: 50%;
-}
-
