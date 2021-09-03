@@ -71,12 +71,21 @@ class WheelLucky extends React.Component {
         });
     };
     getRandomPosition = (arrData) => {
-        let po = Math.floor(Math.random() * 10);
-        if (arrData[po].quantity === 0) {
-            return this.getRandomPosition(arrData);
-        }
-        return arrData[po].value;
+        // let po = Math.floor(Math.random() * 10);
+        // if (arrData[po].quantity === 0) {
+        //     return this.getRandomPosition(arrData);
+        // }
+        // return arrData[po].value;
+
+        const arrTemps = arrData.reduce((res, item, index) => {
+            res = [...res, ...Array(item.quantity).fill(index)];
+            return res;
+        }, []);
+        let po = Math.floor(Math.random() * arrTemps.length);
+        // console.log(arrData[arrTemps[po]].name);
+        return arrData[arrTemps[po]].angle;
     };
+
     renderSector(index, text, start, arc, color, textColor) {
         // create canvas arc for each list element
         let canvas = document.getElementById("wheel");
@@ -167,11 +176,20 @@ class WheelLucky extends React.Component {
                 quantity: 0,
             },
         ];
-        testData = testData.map((e, i) => {
-            e.quantity = this.state.list[i].quantity
+        // testData = testData.map((e, i) => {
+        //     e.quantity = this.state.list[i].quantity
+        //     return e;
+        // })
+        // let randomSpin = this.getRandomPosition(testData);
+
+        // úng các goc từ 1 -> 10
+        const angleValue = [2410, 2370, 2330, 2300, 2260, 2220, 2200, 2520, 2480, 2450];
+        let { list } = this.state;
+        list = list.map((e, i) => {
+            e.angle = angleValue[i];
             return e;
         })
-        let randomSpin = this.getRandomPosition(testData);
+        let randomSpin = this.getRandomPosition(list);
 
         this.setState({
             rotate: randomSpin,
