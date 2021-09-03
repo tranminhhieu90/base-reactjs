@@ -22,7 +22,7 @@ class AccountController implements Controller {
 
     private initializeRoutes() {
         this.router
-            .get(this.path + '/mockData', this.mockData)
+            // .get(this.path + '/mockData', this.mockData)
             .get(this.path + '/checkOnGoingCode' + '/:code', this.checkOnGoingCode)
             .get(this.path + '/list', this.list)
             .put(this.path + '/spin', this.spin)
