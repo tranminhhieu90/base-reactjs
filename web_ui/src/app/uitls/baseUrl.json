@@ -1,6 +1,6 @@
 {
   "basedUrl": "http://127.0.0.1:3333/api/v1/",
-  "basedUrlPro": "http://54.180.199.100:3333/api/v1/",
+  "basedUrlPro": "http://127.0.0.1:3333/api/v1/",
   "port": 0,
   "isProSite": true
 }
