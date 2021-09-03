@@ -3,7 +3,7 @@ import "./wheel.scss";
 import * as apiReward from "../../../services/reward";
 import * as apiCode from "../../../services/code";
 import { toast } from 'react-toastify';
-
+import swal2 from 'sweetalert2';
 class WheelLucky extends React.Component {
     state = {
         list: [],
@@ -221,11 +221,21 @@ class WheelLucky extends React.Component {
         };
         apiCode.spin(obj).then(res => {
             if (res.data.status === 200) {
-                toast.success('Quay thưởng thành công');
+                swal2.fire({
+                    icon: 'success',
+                    title: 'Quay thưởng thành công',
+                    text: reward.name,
+                })
             } else
-                toast.warning(res.data.message);
+                swal2.fire({
+                    icon: 'warning',
+                    title: res.data.message,
+                })
         }).catch((error) => {
-            toast.warning("Quay thưởng thất bại.");
+            swal2.fire({
+                icon: 'warning',
+                title: 'Quay thưởng thất bại',
+            })
         });
     }
     reset = () => {
