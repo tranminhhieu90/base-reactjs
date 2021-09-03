@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 export default class Wheel extends React.Component {
     state = {
         rewards: [],
-        radius: 90, // PIXELS
+        radius: 95, // PIXELS
         rotate: 0, // DEGREES
         easeOut: 0, // SECONDS
         angle: 0, // RADIANS
@@ -50,8 +50,8 @@ export default class Wheel extends React.Component {
     topPosition = (num, angle) => {
         // set starting index and angle offset based on list length
         const cons = Math.PI / 2;
-        const topSpot = num - Math.floor(cons / angle);
-        const degreesOff = cons % angle;
+        const topSpot = num - Math.floor(cons / angle); // chia lấy nguyên
+        const degreesOff = cons % angle;  // chia lấy dư
         this.setState({
             top: topSpot - 1,// trù 1 ra index in mảng
             offset: degreesOff
@@ -68,17 +68,17 @@ export default class Wheel extends React.Component {
         let startAngle = start;
         let endAngle = start + arc;
         let angle = index * arc;// position angle
-        let baseSize = radius * 3.33;
+        let baseSize = x || radius * 2.63 // bằng x || y , 2,63 = x || y / radius;
         let textRadius = baseSize - 150;
 
         ctx.beginPath();
-        ctx.arc(x, y, radius, startAngle, endAngle, false);
+        ctx.arc(x, y, radius, startAngle, endAngle);
         ctx.lineWidth = radius * 2;
         ctx.strokeStyle = color;
         ctx.save();
 
         // set text
-        ctx.font = "13px Arial";
+        ctx.font = "14px Arial bold";
         ctx.fillStyle = "black";
         ctx.stroke();
         ctx.save();
@@ -86,11 +86,8 @@ export default class Wheel extends React.Component {
             baseSize + Math.cos(angle - arc / 2) * textRadius,
             baseSize + Math.sin(angle - arc / 2) * textRadius
         );
-        ctx.rotate(angle - arc / 2 + Math.PI / 2);
+        ctx.rotate((arc / 2) + (index - 1) * arc);
         ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
-
-        // ctx.rotate(angle * Math.PI / 4);
-        ctx.fillText(text, 0, 0);
         ctx.restore();
     }
 
@@ -104,17 +101,20 @@ export default class Wheel extends React.Component {
 
     spin = () => {
         this.reset();
-        // set random spin degree and ease out time
-        // set state variables to initiate animation
-        let randomSpin = Math.floor(Math.random() * 900) + 500 //example 360 is a round, 180 is half round;
-        this.setState({
-            rotate: randomSpin,
-            easeOut: 2,
-        });
-        // calcalute result after wheel stops spinning
         setTimeout(() => {
-            this.getResult(randomSpin);
-        }, 2000); // 2000 same easeout is 2s
+            // set random spin degree and ease out time
+            // set state variables to initiate animation
+            let randomSpin = Math.floor(Math.random() * 900) + 500 //example 360 is a round, 180 is half round;
+            this.setState({
+                rotate: randomSpin,
+                easeOut: 3,
+            });
+            // calcalute result after wheel stops spinning
+            setTimeout(() => {
+                this.getResult(randomSpin);
+            }, 3000); // 3000 same easeout is 3s
+        }, 300);
+
     };
 
     getResult = spin => {
@@ -139,10 +139,10 @@ export default class Wheel extends React.Component {
     };
 
     saveReward = (rewardIndex) => {
-        const reward_id = this.state.rewards[rewardIndex].id;
-        alert(this.state.rewards[rewardIndex].name)
+        const reward = this.state.rewards[rewardIndex];
         const obj = {
-            reward_id,
+            reward_id: reward._id,
+            reward_name: reward.name,
             ...this.props.paramSpin
         };
         apiCode.spin(obj).then(res => {

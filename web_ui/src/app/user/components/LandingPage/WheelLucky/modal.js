@@ -43,7 +43,7 @@ export default function ModalWheel(props) {
     const confirm = async () => {
         if (handleValidation('', fields)) {
             await apiCode.checkOnGoingCode(fields.code).then(res => {
-                if (res.data.status === 200) {
+                if (res.data.result) {
                     props.spin(fields);
                 } else
                     toast.warning(res.data.message);
