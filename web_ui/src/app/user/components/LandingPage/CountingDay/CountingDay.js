@@ -41,33 +41,37 @@ function CountingDay() {
       {showCountDays && (
         <div className="counting-day">
           <div className="counting-day-clock">
-            <div className="counting-day-clock-title">
-              COUNTING DAYS OPENING
+            <div style={{ textAlign: "center" }}>
+              <div className="counting-day-clock-title">
+                Chương trình còn lại
+              </div>
+              <div className="counting-day-clock-time">
+                <div className="counting-day-clock-time-item">
+                  <div className="time-item-number">{timeLeft.day}</div>
+                  <div className="time-item-unit">Days</div>
+                </div>
+                <div className="clock-time-two-dot">:</div>
+                <div className="counting-day-clock-time-item">
+                  <div className="time-item-number">{timeLeft.hours}</div>
+                  <div className="time-item-unit">Hours</div>
+                </div>
+                <div className="clock-time-two-dot">:</div>
+                <div className="counting-day-clock-time-item">
+                  <div className="time-item-number">{timeLeft.minutes}</div>
+                  <div className="time-item-unit">Mins</div>
+                </div>
+                <div className="clock-time-two-dot">:</div>
+                <div className="counting-day-clock-time-item">
+                  <div className="time-item-number">{timeLeft.seconds}</div>
+                  <div className="time-item-unit">Seconds</div>
+                </div>
+              </div>
             </div>
-            <div className="counting-day-clock-time">
-              <div className="counting-day-clock-time-item">
-                <div className="time-item-number">{timeLeft.day}</div>
-                <div className="time-item-unit">Days</div>
-              </div>
-              <div className="clock-time-two-dot">:</div>
-              <div className="counting-day-clock-time-item">
-                <div className="time-item-number">{timeLeft.hours}</div>
-                <div className="time-item-unit">Hours</div>
-              </div>
-              <div className="clock-time-two-dot">:</div>
-              <div className="counting-day-clock-time-item">
-                <div className="time-item-number">{timeLeft.minutes}</div>
-                <div className="time-item-unit">Mins</div>
-              </div>
-              <div className="clock-time-two-dot">:</div>
-              <div className="counting-day-clock-time-item">
-                <div className="time-item-number">{timeLeft.seconds}</div>
-                <div className="time-item-unit">Seconds</div>
+            <div style={{ position: "relative" }}>
+              <div className="counting-day-gift">
+                <img src={Gift} alt="" />
               </div>
             </div>
-          </div>
-          <div className="counting-day-gift">
-            <img src={Gift} alt="" />
           </div>
         </div>
       )}
