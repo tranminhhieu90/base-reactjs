@@ -1,5 +1,6 @@
 import Header from "app/user/share/header";
 import React from "react";
+import Spin from "app/user/assets/images/spin_banner.png";
 import "./Slides.scss";
 function Slides(props) {
   return (
@@ -9,14 +10,19 @@ function Slides(props) {
       </div>
       <div className="slides-content">
         <div className="slides-content-desc">
-          <p>Ngày hội đẹp trai</p> <p>Rinh Iphone cực đỉnh</p>
-          <button
-            type="button"
-            className="btn btn-danger btn-lg"
-            // onClick={() => setIsOpenModal(true)}
-          >
-            Quay Ngay
-          </button>
+          <div>
+            <p>Ngày hội đẹp trai</p> <p>Rinh Iphone cực đỉnh</p>
+            <button
+              type="button"
+              className="btn btn-danger btn-lg"
+              // onClick={() => setIsOpenModal(true)}
+            >
+              Quay Ngay
+            </button>
+          </div>
+          <div className="slides-content-spin">
+            <img src={Spin} alt="" />
+          </div>
         </div>
       </div>
     </div>
