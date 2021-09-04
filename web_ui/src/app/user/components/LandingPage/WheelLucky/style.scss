@@ -30,6 +30,16 @@
         font-weight: 700;
         color: #656d78;
         font-size: 36px;
+        text-align: center;
+        width: 100%;
+        &:after {
+            width: 70px;
+            height: 2px;
+            content: "";
+            background: #fdb827;
+            display: block;
+            margin: 10px auto;
+        }
     }
     .close {
         border: none;

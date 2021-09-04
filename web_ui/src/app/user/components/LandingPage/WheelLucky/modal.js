@@ -54,26 +54,27 @@ export default function ModalWheel(props) {
     };
     return (
         <>
-            <Modal show={true} size="lg" onHide={() => props.spin(null)}>
-                <Modal.Header closeButton>
+            <Modal show={true} size="lg" >
+                <Modal.Header >
+                    <i class="fa fa-times close" onClick={() => props.spin(null)}></i>
                     <Modal.Title>Nhập thông tin quay thưởng</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row justify-content-center">
                         <div className="col-md-9">
-                            <div className="form-group mb-4">
+                            <div className="form-group mb-5">
                                 <label >Họ và tên</label>
                                 <input type="text" className={`form-control form-control-lg ${!!errors.name && 'is-invalid'}`} name="name" id="name"
                                     value={fields.name || ''} onChange={(e) => handleChange(e, 'name')} />
                                 <div className="invalid-feedback">{errors.name}</div>
                             </div>
-                            <div className="form-group mb-4">
+                            <div className="form-group mb-5">
                                 <label >Số điện thoại</label>
                                 <input type="text" className={`form-control form-control-lg ${!!errors.phone_number && 'is-invalid'}`} name="phone_number" id="phone_number"
                                     value={fields.phone_number || ''} onChange={(e) => handleChange(e, 'phone_number')} onKeyPress={keyPressPhone} />
                                 <div className="invalid-feedback">{errors.phone_number}</div>
                             </div>
-                            <div className="form-group mb-4">
+                            <div className="form-group mb-5">
                                 <label >Mã quay thưởng</label>
                                 <input type="text" className={`form-control form-control-lg ${!!errors.code && 'is-invalid'}`} name="code" id="code"
                                     value={fields.code || ''} onChange={(e) => handleChange(e, 'code')} />
