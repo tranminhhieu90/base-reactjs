@@ -1,9 +1,6 @@
 .slides {
-  // background: #f8f7f3;
-  // background-image: url("../../../assets/images/vong-xoay.jpeg");
   background: linear-gradient(#4269fa, #89d9fd);
   border-radius: 0px 0px 100px 100px;
-  // height: 908px;
   background-size: cover;
   &-header {
     padding-top: 10px;
@@ -11,14 +8,17 @@
   &-content {
     max-width: 1260px;
     margin: 0 auto;
+    padding: 50px 0px;
     &-desc {
       font-family: "UTMAvo";
       font-weight: bold;
       font-size: 52px;
       line-height: 120%;
-      // display: flex;
       color: #ffffff;
       text-align: center;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
       button {
         font-weight: bold;
         font-size: 30px;
@@ -26,6 +26,110 @@
         background: #ff0049;
         box-shadow: 0px -1px 20px rgba(255, 255, 255, 0.8);
         border-radius: 76px;
+        margin-top: 40px;
+      }
+    }
+    &-spin {
+      img {
+        width: 500px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .slides {
+    &-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 0px;
+      &-desc {
+        font-size: 33px;
+        // padding: 0 20px;
+        button {
+          font-size: 24px;
+          margin-top: 20px;
+        }
+      }
+      &-spin {
+        img {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .slides {
+    // border-radius: 0px;
+    border-radius: 0px 0px 100px 100px;
+    &-content {
+      // display: none;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0px;
+      &-desc {
+        font-size: 24px;
+        padding: 0 10px;
+        button {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+      }
+      &-spin {
+        img {
+          width: 470px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 441px) and (max-width: 739px) {
+  .slides {
+    border-radius: 0px;
+    &-content {
+      display: none;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0px;
+      &-desc {
+        font-size: 33px;
+        // padding: 0 20px;
+        button {
+          font-size: 24px;
+          margin-top: 20px;
+        }
+      }
+      &-spin {
+        img {
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .slides {
+    border-radius: 0px;
+    &-content {
+      display: none;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0px;
+      &-desc {
+        font-size: 33px;
+        // padding: 0 20px;
+        button {
+          font-size: 24px;
+          margin-top: 20px;
+        }
+      }
+      &-spin {
+        img {
+          width: 500px;
+        }
       }
     }
   }
