@@ -1,67 +1,106 @@
 .container {
-    position: relative;
-    margin-top: 5rem;
+  position: relative;
+  margin-top: 5rem;
 }
 
 .content-right {
-    padding-top: 3rem;
-    h1 {
-        font-size: 46px;
-        font-weight: 800;
-        color: #656d78;
-    }
-    p {
-        font-weight: 500;
-        color: #656d78;
-        font-size: 1.2rem;
-    }
-    .btn {
-        border-radius: 2rem;
-        padding: 1rem;
-    }
+  padding-top: 3rem;
+  h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: #656d78;
+  }
+  p {
+    font-weight: 500;
+    color: #656d78;
+    font-size: 1.2rem;
+  }
+  .btn {
+    border-radius: 2rem;
+    padding: 1rem;
+  }
 }
 .modal-dialog {
-    max-width: 850px !important;
+  max-width: 850px !important;
 }
 .modal-content {
-    background-color: #fafafa !important;
-    border-radius: 3rem !important;
-    .modal-title {
-        font-weight: 700;
-        color: #656d78;
-        font-size: 36px;
+  background-color: #fafafa !important;
+  border-radius: 3rem !important;
+  .modal-title {
+    font-weight: 700;
+    color: #656d78;
+    font-size: 36px;
+  }
+  .close {
+    border: none;
+    font-size: 2rem;
+    color: #fdb827;
+    background: #fafafa;
+  }
+  .modal-footer {
+    justify-content: center;
+    .btn {
+      font-weight: bold;
+      color: #656d78;
+      border-radius: 1rem;
+      font-size: 24px;
+      background: #fdb827;
+      width: 230px;
+      height: 58px;
     }
-    .close {
-        border: none;
-        font-size: 2rem;
-        color: #fdb827;
-        background: #fafafa;
+  }
+  .modal-body {
+    label {
+      font-weight: 400;
+      font-size: 20px;
+      color: #000000;
+      margin-left: 1rem;
     }
-    .modal-footer {
-        justify-content: center;
-        .btn {
-            font-weight: bold;
-            color: #656d78;
-            border-radius: 1rem;
-            font-size: 24px;
-            background: #fdb827;
-            width: 230px;
-            height: 58px;
-        }
+    .form-control {
+      border-radius: 2rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     }
-    .modal-body {
-        label {
-            font-weight: 400;
-            font-size: 20px;
-            color: #000000;
-            margin-left: 1rem;
-        }
-        .form-control {
-            border-radius: 2rem;
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
-        .invalid-feedback {
-            margin-left: 1rem;
-        }
+    .invalid-feedback {
+      margin-left: 1rem;
     }
+  }
+}
+
+.spin-title-mobile {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  p {
+    margin: 0;
+  }
+}
+
+@media (min-width: 441px) and (max-width: 739px) {
+  .spin-title-mobile {
+    display: block;
+    font-size: 32px;
+    font-weight: 800;
+    color: #656d78;
+  }
+  .content-right {
+    h1 {
+      font-size: 46px;
+      font-weight: 800;
+      color: #656d78;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .spin-title-mobile {
+    display: block;
+    font-size: 32px;
+    font-weight: 800;
+    color: #656d78;
+  }
+  .content-right {
+    h1 {
+      font-size: 35px;
+    }
+  }
 }
