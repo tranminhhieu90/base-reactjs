@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "app/user/assets/images/logo.png";
+import Logo from "app/user/assets/images/logo-white.png";
 const Header = (props) => {
   const [showMenuMobile, setShowMenuMobile] = useState(false);
   return (
@@ -9,11 +9,9 @@ const Header = (props) => {
       </div>
       <div className="header-menu">
         <ul>
-          <li>Home</li>
-          <li>Lucky Wheel</li>
-          <li>Tutorial</li>
+          <li>Trang Chủ</li>
+          <li>Vòng Quay</li>
           <li>FAQ</li>
-          <li>News</li>
         </ul>
       </div>
       <div className="header-menu-icon">
@@ -29,11 +27,9 @@ const Header = (props) => {
         {showMenuMobile && (
           <div className="menu-mobile">
             <ul>
-              <li>Home</li>
-              <li>Lucky Wheel</li>
-              <li>Tutorial</li>
+              <li>Trang Chủ</li>
+              <li>Vòng Quay</li>
               <li>FAQ</li>
-              <li>News</li>
             </ul>
           </div>
         )}
