@@ -5,10 +5,10 @@ import "./Slides.scss";
 function Slides(props) {
   const [isOpenSpinWheel, setIsOpenSpinWheel] = useState(null);
   const onSpinWheel = () => {
-    const tongue = !isOpenSpinWheel
+    const tongue = !isOpenSpinWheel;
     setIsOpenSpinWheel(tongue);
     props.spinWheel(tongue);
-  }
+  };
   return (
     <div className="slides">
       <div className="slides-header">
@@ -23,7 +23,7 @@ function Slides(props) {
               className="btn btn-danger btn-lg"
               onClick={() => onSpinWheel()}
             >
-              Quay Ngay
+              <p>Quay Ngay</p>
             </button>
           </div>
           <div className="slides-content-spin">
