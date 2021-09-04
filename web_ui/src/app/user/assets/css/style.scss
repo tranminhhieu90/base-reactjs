@@ -44,7 +44,6 @@
           color: #4f4f4f;
           font-weight: 500;
           font-size: 18px;
-
           li {
             &:not(:last-child) {
               margin-bottom: 20px;
@@ -87,8 +86,9 @@
         cursor: pointer;
         display: flex;
         color: whitesmoke;
-        font-weight: 500;
+        font-weight: 550;
         font-size: 18px;
+        letter-spacing: 1.3;
         li {
           &:not(:last-child) {
             margin-right: 40px;

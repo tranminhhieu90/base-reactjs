@@ -70,3 +70,41 @@
         }
     }
 }
+.spin-title-mobile {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    p {
+        margin: 0;
+    }
+}
+
+@media (min-width: 441px) and (max-width: 739px) {
+    .spin-title-mobile {
+        display: block;
+        font-size: 32px;
+        font-weight: 800;
+        color: #656d78;
+    }
+    .content-right {
+        h1 {
+            font-size: 46px;
+            font-weight: 800;
+            color: #656d78;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .spin-title-mobile {
+        display: block;
+        font-size: 32px;
+        font-weight: 800;
+        color: #656d78;
+    }
+    .content-right {
+        h1 {
+            font-size: 35px;
+        }
+    }
+}

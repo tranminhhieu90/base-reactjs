@@ -83,7 +83,7 @@ export default function ModalWheel(props) {
                     </div>
 
                 </Modal.Body>
-                <Modal.Footer>
+                <Modal.Footer className="mb-3">
                     <button type="button" className="btn btn-primary btn-warning btn-lg" onClick={confirm}>Xác nhận</button>
                 </Modal.Footer>
             </Modal>
