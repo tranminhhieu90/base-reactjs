@@ -32,7 +32,7 @@
     font-size: 36px;
     text-align: center;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 18px;
     &:after {
       width: 70px;
       height: 2px;
@@ -53,6 +53,19 @@
     max-width: 960px;
     i {
       cursor: pointer;
+    }
+  }
+  .modal-body {
+    width: 770px;
+    margin: 0 auto;
+    label {
+      margin-bottom: 15px;
+    }
+    input {
+      height: 65px;
+    }
+    .form-group {
+      margin-bottom: 25px !important;
     }
   }
   .modal-footer {
@@ -100,6 +113,15 @@
       font-size: 30px;
       padding-top: 15px;
     }
+    .modal-body {
+      width: 550px;
+      label {
+        margin-bottom: 15px;
+      }
+      input {
+        height: 65px;
+      }
+    }
   }
 }
 
@@ -108,6 +130,15 @@
     .modal-title {
       font-size: 30px;
       padding-top: 15px;
+    }
+    .modal-body {
+      width: 510px;
+      label {
+        margin-bottom: 15px;
+      }
+      input {
+        height: 65px;
+      }
     }
   }
   .spin-title-mobile {
@@ -137,6 +168,15 @@
       padding-top: 16px;
       padding-left: 10px;
     }
+    .modal-body {
+      width: 350px;
+      label {
+        margin-bottom: 15px;
+      }
+      input {
+        height: 60px;
+      }
+    }
   }
   .spin-title-mobile {
     display: block;
@@ -149,4 +189,19 @@
       font-size: 35px;
     }
   }
+}
+
+.spin-btn {
+  font-family: "UTMAvo" !important;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  line-height: 120% !important;
+  color: #ffffff !important;
+  line-height: 120% !important;
+  background: #ff0049 !important;
+  box-shadow: 0px -1px 20px rgba(199, 113, 113, 0.8) !important;
+  border-radius: 76px !important;
+  padding: 10px 10px 13px 10px;
+  display: inline;
 }

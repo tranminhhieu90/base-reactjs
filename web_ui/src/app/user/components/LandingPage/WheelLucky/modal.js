@@ -70,6 +70,7 @@ export default function ModalWheel(props) {
                 <label>Họ và tên</label>
                 <input
                   type="text"
+                  placeholder="Họ và tên"
                   className={`form-control form-control-lg ${
                     !!errors.name && "is-invalid"
                   }`}
@@ -84,6 +85,7 @@ export default function ModalWheel(props) {
                 <label>Số điện thoại</label>
                 <input
                   type="text"
+                  placeholder="Nhập số điện thoại"
                   className={`form-control form-control-lg ${
                     !!errors.phone_number && "is-invalid"
                   }`}
@@ -95,10 +97,14 @@ export default function ModalWheel(props) {
                 />
                 <div className="invalid-feedback">{errors.phone_number}</div>
               </div>
-              <div className="form-group mb-5">
+              <div
+                className="form-group mb-5"
+                style={{ marginBottom: "25px !important" }}
+              >
                 <label>Mã quay thưởng</label>
                 <input
                   type="text"
+                  placeholder="Nhập mã quay thưởng"
                   className={`form-control form-control-lg ${
                     !!errors.code && "is-invalid"
                   }`}
