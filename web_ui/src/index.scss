@@ -1,4 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+@font-face {
+  font-family: "UTMAvo";
+  // src: url("../../../assets/fonts/UTMAvoBold.ttf") format("truetype");
+  src: url("./app/user/assets/fonts/UTMAvoBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UTMAvo";
+  src: url("./app/user/assets/fonts/UTMAvo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UTMAvo";
+  src: url("./app/user/assets/fonts/UTMAvoItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "UTMAvo";
+  src: url("./app/user/assets/fonts/UTMAvoBold_Italic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
 body {
   margin: 0;
   // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -8,7 +33,7 @@ body {
   font-size: 14px !important;
   color: #333 !important;
   // font-family: Roboto, sans-serif !important;
-  font-family: "Poppins", sans-serif !important;
+  font-family: "UTMAvo", sans-serif !important;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
