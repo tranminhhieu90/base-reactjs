@@ -1,27 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Wheel from './wheel';
 import './style.scss';
 import ModalWheel from './modal';
-export default function WheelLucky() {
+export default function WheelLucky(props) {
 
     const [isOpenModal, setIsOpenModal] = useState(false);
     const [paramSpin, setParamSpin] = useState(null);
-    const onSpin = (param) => {
-        if (window.innerWidth <= 480) {
-            const height = document.getElementsByClassName("spin-wheel");
-            if (height)
-                setTimeout(() => {
-                    document.body.scrollTop = height.offsetTop;
-                    document.documentElement.scrollTop = height.offsetTop;
-                }, 200);
+    const wheelRef = useRef();
+    useEffect(() => {
+        if (props.isOpenSpinWheel !== null) {
+            setIsOpenModal(true);
         }
+    }, [props.isOpenSpinWheel])
+
+    const onSpin = (param) => {
+        // if (window.innerWidth <= 480) {
+        setTimeout(() => {
+            wheelRef.current.scrollIntoView({ behavior: 'smooth' })
+        }, 200)
+        // }
         setIsOpenModal(false);
         setParamSpin(param)
     }
     return (
         <div className="container pb-5">
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-md-6" ref={wheelRef}>
                     <Wheel paramSpin={paramSpin} />
                 </div>
                 <div className="col-md-6 content-right">

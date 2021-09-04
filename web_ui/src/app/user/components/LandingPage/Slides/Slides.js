@@ -1,8 +1,14 @@
 import Header from "app/user/share/header";
-import React from "react";
+import React, { useState } from "react";
 import Spin from "app/user/assets/images/spin_banner.png";
 import "./Slides.scss";
 function Slides(props) {
+  const [isOpenSpinWheel, setIsOpenSpinWheel] = useState(null);
+  const onSpinWheel = () => {
+    const tongue = !isOpenSpinWheel
+    setIsOpenSpinWheel(tongue);
+    props.spinWheel(tongue);
+  }
   return (
     <div className="slides">
       <div className="slides-header">
@@ -15,7 +21,7 @@ function Slides(props) {
             <button
               type="button"
               className="btn btn-danger btn-lg"
-              // onClick={() => setIsOpenModal(true)}
+              onClick={() => onSpinWheel()}
             >
               Quay Ngay
             </button>
