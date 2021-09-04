@@ -37,8 +37,12 @@
         color: #fdb827;
         background: #fafafa;
     }
+    .modal-header {
+        border-bottom: none;
+    }
     .modal-footer {
         justify-content: center;
+        border-top: none !important;
         .btn {
             font-weight: bold;
             color: #656d78;
@@ -59,6 +63,7 @@
         .form-control {
             border-radius: 2rem;
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            border: 1px solid #fff !important;
         }
         .invalid-feedback {
             margin-left: 1rem;
