@@ -20,7 +20,7 @@ $list-winner-header-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 36px;
   }
   &-header {
@@ -73,6 +73,7 @@ $list-winner-header-height: 80px;
       }
       &-item.reward {
         width: 350px;
+        font-weight: bolder;
         flex: unset;
       }
     }

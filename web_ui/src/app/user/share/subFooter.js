@@ -8,11 +8,10 @@ const SubFooter = (props) => {
       </div>
       <div className="sub-footer-menu">
         <ul>
-          <li>Home</li>
-          <li>Lucky Wheel</li>
-          <li>Tutorial</li>
+          <li>Trang Chủ</li>
+          <li>Vòng Quay</li>
+          <li>Cửa Hàng</li>
           <li>FAQ</li>
-          <li>News</li>
         </ul>
       </div>
     </div>

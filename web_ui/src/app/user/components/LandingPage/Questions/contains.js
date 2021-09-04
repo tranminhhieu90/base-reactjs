@@ -21,6 +21,6 @@ export const LIST_QUESTIONS = [
     id: "question-4",
     question: "Điều kiện nhận giải thưởng như thế nào?",
     answer:
-      "Bạn chỉ cần là khách hàng đã mua hàng trên Shopee và sở hữ mã quay thưởng do Nerman cung cấp là đủ điều kiện để tham gia quay thưởng và nhận giải.",
+      "Bạn chỉ cần là khách hàng đã mua hàng trên Shopee và sở hữu mã quay thưởng do Nerman cung cấp là đủ điều kiện để tham gia quay thưởng và nhận giải.",
   },
 ];
