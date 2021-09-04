@@ -12,7 +12,7 @@ class RewardService {
 	        const result = await this.reward.insertMany(
 	        	[
 	                {
-	                    name: "Thẻ điện thoại 50k",
+	                    name: "Thẻ ĐT 50k",
 	                    type: "CARD",
 	                    quantity: 3,
 	                    season: 1,
@@ -22,7 +22,7 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "Thẻ điện thoại 100k",
+	                    name: "Thẻ ĐT 100k",
 	                    type: "CARD",
 	                    quantity: 1,
 	                    season: 1,
@@ -32,7 +32,7 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "Gói tinder gold 1 tháng",
+	                    name: "Gói Tinder Gold ",
 	                    type: "PACKAGE",
 	                    quantity: 1,
 	                    season: 1,
@@ -42,7 +42,7 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "Bình nước",
+	                    name: "Bình giữ nhiệt",
 	                    type: "ORTHER",
 	                    quantity: 25,
 	                    season: 1,
@@ -52,7 +52,7 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "Iphone",
+	                    name: "Iphone 12 Pro",
 	                    type: "PHONE",
 	                    quantity: 0,
 	                    season: 1,
@@ -62,7 +62,7 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "Airpod",
+	                    name: "Airpod Pro",
 	                    type: "PHONE",
 	                    quantity: 0,
 	                    season: 1,
@@ -72,9 +72,9 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "Gói tinder plus 1 tuần",
+	                    name: "Gói Tinder + ",
 	                    type: "PACKAGE",
-	                    quantity: 20,
+	                    quantity: 5,
 	                    season: 1,
 	                    lock: 0,
 	                    created_id : mongoose.Types.ObjectId("612faeda1e223e4d16cc571d"),
@@ -82,7 +82,7 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "Combo 39k",
+	                    name: "Box Trial 149k",
 	                    type: "COMBO",
 	                    quantity: 0,
 	                    season: 1,
@@ -92,7 +92,7 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "Sữa rửa mặt",
+	                    name: "Sữa rửa mặt Nerman",
 	                    type: "SKINCARE",
 	                    quantity: 115,
 	                    season: 1,
@@ -102,7 +102,7 @@ class RewardService {
 	                    updated_at: new Date()
 	                },
 	                {
-	                    name: "BBcream cho nam",
+	                    name: "BBcream Nerman",
 	                    type: "SKINCARE",
 	                    quantity: 0,
 	                    season: 1,
