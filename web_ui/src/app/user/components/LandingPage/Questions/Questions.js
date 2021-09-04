@@ -3,7 +3,7 @@ import "./Questions.scss";
 import { LIST_QUESTIONS } from "./contains";
 function Questions(props) {
   return (
-    <div className="questions">
+    <div className="questions" id="questions">
       <div className="questions-title">
         <div>Câu hỏi thường gặp</div>
       </div>
@@ -15,7 +15,6 @@ function Questions(props) {
                 <h2 className="accordion-header" id={item.id}>
                   <div
                     className="accordion-button collapsed"
-                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target={`#collapse${index}`}
                     aria-expanded="false"

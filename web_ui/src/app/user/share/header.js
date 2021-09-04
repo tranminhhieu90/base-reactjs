@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Logo from "app/user/assets/images/logo-white.png";
 const Header = (props) => {
   const [showMenuMobile, setShowMenuMobile] = useState(false);
+  const url = "https://nerman.com.vn/";
+
   return (
     <div className="header">
       <div className="header-logo">
@@ -9,9 +11,33 @@ const Header = (props) => {
       </div>
       <div className="header-menu">
         <ul>
-          <li>Trang Chủ</li>
-          <li>Vòng Quay</li>
-          <li>FAQ</li>
+          <li
+            onClick={() => {
+              window.open(url, "_blank").focus();
+            }}
+          >
+            Trang Chủ
+          </li>
+          <li
+            onClick={() => {
+              const spinWheelElement = document.getElementById("spin-wheel");
+              if (spinWheelElement) {
+                spinWheelElement.scrollIntoView();
+              }
+            }}
+          >
+            Vòng Quay
+          </li>
+          <li
+            onClick={() => {
+              const questionsElement = document.getElementById("questions");
+              if (questionsElement) {
+                questionsElement.scrollIntoView();
+              }
+            }}
+          >
+            FAQ
+          </li>
         </ul>
       </div>
       <div className="header-menu-icon">
@@ -27,9 +53,36 @@ const Header = (props) => {
         {showMenuMobile && (
           <div className="menu-mobile">
             <ul>
-              <li>Trang Chủ</li>
-              <li>Vòng Quay</li>
-              <li>FAQ</li>
+              <li
+                onClick={() => {
+                  window.open(url, "_blank").focus();
+                }}
+              >
+                Trang Chủ
+              </li>
+              <li
+                onClick={() => {
+                  const spinWheelElement =
+                    document.getElementById("spin-wheel");
+                  if (spinWheelElement) {
+                    spinWheelElement.scrollIntoView();
+                  }
+                  setShowMenuMobile(false);
+                }}
+              >
+                Vòng Quay
+              </li>
+              <li
+                onClick={() => {
+                  const questionsElement = document.getElementById("questions");
+                  if (questionsElement) {
+                    questionsElement.scrollIntoView();
+                  }
+                  setShowMenuMobile(false);
+                }}
+              >
+                FAQ
+              </li>
             </ul>
           </div>
         )}
