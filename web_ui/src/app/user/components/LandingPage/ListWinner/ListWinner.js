@@ -2,8 +2,25 @@ import { getListWinner } from "app/admin/services/landingPage";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import "./ListWinner.scss";
+const defaultListWinner = [
+  {
+    created_at: "2021-09-02T11:19:12.772Z",
+    phone_number: "09898504113",
+    reward_name: "Thẻ điện thoại 100k",
+  },
+  {
+    created_at: "2021-09-02T11:19:12.772Z",
+    phone_number: "03768504587",
+    reward_name: "Bình nước",
+  },
+  {
+    created_at: "2021-09-03T11:19:12.772Z",
+    phone_number: "0988504587",
+    reward_name: "Gói tinder gold 1 tháng",
+  },
+];
 function ListWinner(props) {
-  const [listWinner, setListWinner] = useState([]);
+  const [listWinner, setListWinner] = useState(defaultListWinner);
   useEffect(() => {
     fetchDataListWinner();
   }, []);
@@ -12,10 +29,11 @@ function ListWinner(props) {
     try {
       const { data } = await getListWinner();
       if (data) {
-        setListWinner(data.result);
+        const dataJoin = [...defaultListWinner, ...data.result];
+        setListWinner(dataJoin);
       }
     } catch (error) {
-      setListWinner([]);
+      setListWinner(defaultListWinner);
     }
   };
 
