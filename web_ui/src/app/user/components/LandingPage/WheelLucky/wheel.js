@@ -7,7 +7,7 @@ import swal2 from 'sweetalert2';
 class WheelLucky extends React.Component {
     state = {
         list: [],
-        radius: 75, // PIXELS
+        radius: 78, // PIXELS
         rotate: 0, // DEGREES
         easeOut: 0, // SECONDS
         angle: 0, // RADIANS
@@ -96,7 +96,7 @@ class WheelLucky extends React.Component {
         let startAngle = start;
         let endAngle = start + arc;
         let angle = index * arc;
-        let baseSize = radius * 3.33;
+        let baseSize = radius * 3.2;
         let textRadius = baseSize - 150;
 
         ctx.beginPath();
@@ -242,8 +242,8 @@ class WheelLucky extends React.Component {
                 this.getReward();
                 swal2.fire({
                     icon: 'success',
-                    title: 'Quay thưởng thành công',
-                    text: reward.name,
+                    title: 'Chúc mừng bạn đã nhận được phần quà là ' + reward.name,
+                    text: 'Nerman sẽ liên hệ với bạn để xác nhận thông tin sớm nhất!',
                 })
             } else
                 swal2.fire({

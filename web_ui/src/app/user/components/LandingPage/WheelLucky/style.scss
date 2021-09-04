@@ -21,35 +21,44 @@
     }
 }
 .modal-dialog {
-    max-width: 765px !important;
+    max-width: 850px !important;
 }
 .modal-content {
+    background-color: #fafafa !important;
+    border-radius: 3rem !important;
     .modal-title {
-        font-weight: 600;
+        font-weight: 700;
         color: #656d78;
+        font-size: 36px;
     }
     .close {
         border: none;
         font-size: 2rem;
-        color: #ffcd39;
-        background: white;
+        color: #fdb827;
+        background: #fafafa;
     }
     .modal-footer {
         justify-content: center;
         .btn {
-            font-weight: 600;
+            font-weight: bold;
             color: #656d78;
             border-radius: 1rem;
+            font-size: 24px;
+            background: #fdb827;
+            width: 230px;
+            height: 58px;
         }
     }
     .modal-body {
         label {
-            font-weight: 600;
-            color: #656d78;
+            font-weight: 400;
+            font-size: 20px;
+            color: #000000;
             margin-left: 1rem;
         }
         .form-control {
             border-radius: 2rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
         }
         .invalid-feedback {
             margin-left: 1rem;
