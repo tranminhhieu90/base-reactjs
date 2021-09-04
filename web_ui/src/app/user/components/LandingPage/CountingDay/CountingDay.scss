@@ -9,7 +9,7 @@
   position: relative;
   box-shadow: -4px 10px 50px #89d9fd;
   &-clock {
-    padding: 36px 0px 0px 70px;
+    padding: 25px 0px 0px 70px;
     color: #ffffff;
     display: flex;
     justify-content: space-around;
@@ -17,14 +17,14 @@
     &-title {
       font-weight: 700;
       font-size: 36px;
-      margin-bottom: 20px;
+      margin-bottom: 9px;
     }
     &-time {
       display: flex;
-
+      align-items: center;
       .clock-time-two-dot {
         font-size: 36px;
-        margin: 0 24px;
+        margin: 0px 24px;
         font-weight: 800;
       }
       &-item {
@@ -32,7 +32,7 @@
         .time-item-number {
           font-weight: 800;
           font-size: 48px;
-          line-height: 20px;
+          line-height: 36px;
         }
         .time-item-unit {
           font-weight: 500;
