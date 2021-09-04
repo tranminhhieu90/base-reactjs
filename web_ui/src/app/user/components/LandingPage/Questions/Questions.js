@@ -8,7 +8,7 @@ function Questions(props) {
         <div>Câu hỏi thường gặp</div>
       </div>
       <div className="questions-body">
-        <div className="accordion" id="accordionExample">
+        <div className="accordion">
           {LIST_QUESTIONS.map((item, index) => {
             return (
               <div key={item.id} className="accordion-item">
