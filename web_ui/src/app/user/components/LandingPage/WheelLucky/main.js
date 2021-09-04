@@ -7,6 +7,14 @@ export default function WheelLucky() {
     const [isOpenModal, setIsOpenModal] = useState(false);
     const [paramSpin, setParamSpin] = useState(null);
     const onSpin = (param) => {
+        if (window.innerWidth <= 480) {
+            const height = document.getElementsByClassName("spin-wheel");
+            if (height)
+                setTimeout(() => {
+                    document.body.scrollTop = height.offsetTop;
+                    document.documentElement.scrollTop = height.offsetTop;
+                }, 200);
+        }
         setIsOpenModal(false);
         setParamSpin(param)
     }
